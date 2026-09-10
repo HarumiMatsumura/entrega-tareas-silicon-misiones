@@ -1,0 +1,146 @@
+:root {
+    --bg-color: #f4f6fB;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --primary-color: #4a90e2;
+    --danger-color: #e74c3c;
+    --completed-color: #BBBBBB;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.contenedor {
+    background-color: var(--card-bg);
+    width: 100%;
+    max-width: 480px;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.ingreso {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.input-contenedor {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.ingreso input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+}
+
+.info-caracteres {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #666;
+    padding: 0 2px;
+}
+
+.info-caracteres.limite-alcanzado {
+    color: var(--danger-color);
+    font-weight: bold;
+}
+
+.ingreso button {
+    padding: 10px 14px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-secundario {
+    background-color: #e0e0e0 !important;
+    color: #333 !important;
+}
+
+.filtros {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.filtros button {
+    background: none;
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.filtros button.activo {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.lista {
+    list-style: none;
+}
+
+.lista li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.lista li.completada span {
+    text-decoration: line-through;
+    color: var(--completed-color);
+}
+
+.contenido-tarea {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-eliminar {
+    background-color: var(--danger-color);
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.info-footer {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+    text-align: right;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista De Tareas - TP2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <main class="contenedor">
+        <h1>Mi Lista De Tareas</h1>
+
+        <form id="form-tarea" class="ingreso">
+            <div class="input-contenedor">
+                <input type="text" id="input-tarea" placeholder="Agregar Una Nueva Tarea..." maxlength="60" required>
+                
+                <div class="info-caracteres">
+                    <span id="contador-caracteres">0 / 60 caracteres</span>
+                    <span id="contador-extra">(0 palabras | 0 sin espacios)</span>
+                </div>
+            </div>
+
+            <button type="submit" id="btn-agregar">Agregar</button>
+            <button type="button" id="btn-limpiar" class="btn-secundario">Limpiar</button>
+        </form>
+
+        <section class="filtros">
+            <button id="btn-todas" class="activo" type="button">Todas</button>
+            <button id="btn-pendientes" type="button">Pendientes</button>
+            <button id="btn-completadas" type="button">Completadas</button>
+        </section>
+
+        <ul id="lista-tareas" class="lista"></ul>
+
+        <footer class="info-footer">
+            <span id="contador">0 tareas pendientes</span>
+        </footer>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
